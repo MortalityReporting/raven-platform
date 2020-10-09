@@ -2,3 +2,6 @@
 	path = raven-fhir-server
 	url = https://github.com/MortalityReporting/raven-fhir-server.git
 	branch = master
+[submodule "raven-mapper-api"]
+	path = raven-mapper-api
+	url = https://github.com/MortalityReporting/raven-mapper-api.git
