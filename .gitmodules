@@ -1,0 +1,4 @@
+[submodule "raven-fhir-server"]
+	path = raven-fhir-server
+	url = https://github.com/MortalityReporting/raven-fhir-server.git
+	branch = master
