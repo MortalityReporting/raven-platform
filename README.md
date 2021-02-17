@@ -1,8 +1,10 @@
 # Raven Platform
-Raven platform is a platform to provide a reference implementation and testing tools for the interoperability between case management system (CMS) and electronic death registration system (EDRS). 
+Raven is a Proof-Of-Concept Case Management System for a local Coroners or Medical Examiners. Raven stores Decedent case data in the form of [FHIR resources](https://www.hl7.org/fhir/), which can be easily shared and analyzed across many platforms.
 
-## Components
-### raven-fhir-server
-Raven FHIR server is to store and manage MDI data in FHIR. More details are available in the raven-fhir-server repository.
-### raven-mapper-api
-Raven Mapper API is to construct MDI data in FHIR from pre-defined CSV file. More details are available in the raven-mapper-api repository.
+This repository consists of three components:
+
+* Raven Dashboard: The Raven Dashboard serves is the frontend for the Raven Platform through which user's can import their own data, view currently stored FHIR VRDR Resources, and export FHIR VRDR Resources to external Death Registration Systems.
+* Raven FHIR Server: The Raven FHIR Server provides API access to a Fhirbase database, which acts as the data store for the Raven Platform. 
+* Raven Mapper-Export: The Raven Mapper-Export component (sometimes seen under the legacy name Raven Mapper API) provides for two distinct APIs, one for mapping and importing MDI CSV data to the FHIR Server and another for handling exports VRDR compliant documents to external systems.
+
+**For more information, please see the [Raven Platform GitHub Wiki page](https://github.com/MortalityReporting/raven-platform/wiki).**
