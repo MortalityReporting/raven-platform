@@ -5,3 +5,7 @@
 [submodule "raven-mapper-api"]
 	path = raven-mapper-api
 	url = https://github.com/MortalityReporting/raven-mapper-api.git
+[submodule "raven-dashboard"]
+	path = raven-dashboard
+	url = https://github.com/MortalityReporting/raven-dashboard.git
+	branch = main
