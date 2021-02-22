@@ -43,7 +43,7 @@ In the /raven-platform/raven-fhir-server directory, execute:
 sudo docker build -f Dockerfile.local -t raven-fhir-server .
 sudo docker run -d --restart unless-stopped --publish 8080:8080 --name raven-fhir-server --network=raven-platform raven-fhir-server
 ```
-Available at: [http://localhost:8080/raven-fhir-server]
+Available at: [http://localhost:8080/raven-fhir-server](http://localhost:8080/raven-fhir-server)
 
 ## Raven FHIR Mapper Export
 In the /raven-platform/raven-mapper-api directory, execute:
@@ -51,7 +51,7 @@ In the /raven-platform/raven-mapper-api directory, execute:
 sudo docker build -f Dockerfile.local -t raven-mapper-export .
 sudo docker run -d --restart unless-stopped --publish 8081:8080 --name raven-mapper-export --network=raven-platform raven-mapper-export
 ```
-Available at: [http://localhost:8081/raven-mapper-api]
+Available at: [http://localhost:8081/raven-mapper-api](http://localhost:8081/raven-mapper-api)
 
 To test the components thus far and to load initial test data for the dashboard, navigate to the Raven Mapper Export URL above. In the ./raven-mapper-api directory you will see a csv that you may load using this interface, which should then tbe posted to the Raven FHIR Server. If it provides a check as a response, everything is working.
 
@@ -61,5 +61,5 @@ In the /raven-platform/raven-mapper-api directory, execute:
 sudo docker build -f Dockerfile.local -t raven-dashboard . 
 sudo docker run -d -p 80:80 --network=raven-platform --name raven-dashboard --restart unless-stopped raven-dashboard:latest
 ```
-Available at: [http://localhost:80/app/cases]
+Available at: [http://localhost:80/app/cases](http://localhost:80/app/cases)
 
