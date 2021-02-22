@@ -13,12 +13,12 @@ This repository consists of three components:
 # Deploying the Raven Platform
 This section of this Readme will provide a bare bones series of commands to deploy the Raven Platform in your local environment using Docker. For a more detailed write up, including explanation of each command and areas for custom configuration, please see the [Raven Platform GitHub Wiki page](https://github.com/MortalityReporting/raven-platform/wiki).
 
-## Preqrequisites
+### Prerequisites
 * Docker/Docker Desktop
 * Maven
 * Java JDK 10+
 
-## Setup
+### Setup
 
 Clone this repository and all submodules:
 ```
@@ -37,7 +37,7 @@ docker exec -it fhir_db fhirbase -d ravenfhirdb --fhir=4.0.0 init
 ```
 Available at: [http://localhost:3000](http://localhost:3000)
 
-## Raven FHIR Server
+### Raven FHIR Server
 In the /raven-platform/raven-fhir-server directory, execute:
 ```
 sudo docker build -f Dockerfile.local -t raven-fhir-server .
@@ -45,7 +45,7 @@ sudo docker run -d --restart unless-stopped --publish 8080:8080 --name raven-fhi
 ```
 Available at: [http://localhost:8080/raven-fhir-server](http://localhost:8080/raven-fhir-server)
 
-## Raven FHIR Mapper Export
+### Raven FHIR Mapper Export
 In the /raven-platform/raven-mapper-api directory, execute:
 ```
 sudo docker build -f Dockerfile.local -t raven-mapper-export .
@@ -55,7 +55,7 @@ Available at: [http://localhost:8081/raven-mapper-api](http://localhost:8081/rav
 
 To test the components thus far and to load initial test data for the dashboard, navigate to the Raven Mapper Export URL above. In the ./raven-mapper-api directory you will see a csv that you may load using this interface, which should then tbe posted to the Raven FHIR Server. If it provides a check as a response, everything is working.
 
-## Raven Dashboard
+### Raven Dashboard
 In the /raven-platform/raven-mapper-api directory, execute:
 ```
 sudo docker build -f Dockerfile.local -t raven-dashboard . 
