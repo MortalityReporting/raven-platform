@@ -46,7 +46,10 @@ sudo docker run -d --restart unless-stopped --publish 8080:8080 --name raven-fhi
 Available at: [http://localhost:8080/raven-fhir-server](http://localhost:8080/raven-fhir-server)
 
 ### Raven Import and Submission API
-In the /raven-platform/raven-import-and-submit directory, execute:
+(Note: There are some legacy references to this component under the name Raven Mapper API, such as in the repo name, in the current version.)
+
+
+In the /raven-platform/raven-mapper-api directory, execute:
 ```
 sudo docker build -f Dockerfile.local -t raven-import-submit .
 sudo docker run -d --restart unless-stopped --publish 8081:8080 --name raven-import-submit --network=raven-platform raven-import-submit
