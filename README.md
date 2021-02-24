@@ -48,12 +48,12 @@ Available at: [http://localhost:8080/raven-fhir-server](http://localhost:8080/ra
 ### Raven Import and Submission API
 In the /raven-platform/raven-import-and-submit directory, execute:
 ```
-sudo docker build -f Dockerfile.local -t raven-mapper-export .
-sudo docker run -d --restart unless-stopped --publish 8081:8080 --name raven-mapper-export --network=raven-platform raven-mapper-export
+sudo docker build -f Dockerfile.local -t raven-import-submit .
+sudo docker run -d --restart unless-stopped --publish 8081:8080 --name raven-import-submit --network=raven-platform raven-import-submit
 ```
-Available at: [http://localhost:8081/raven-mapper-api](http://localhost:8081/raven-mapper-api)
+Available at: [http://localhost:8081/raven-mapper-api](http://localhost:8081/raven-import-and-submit)
 
-To test the components thus far and to load initial test data for the dashboard, navigate to the Raven Mapper Export URL above. In the ./raven-mapper-api directory you will see a csv that you may load using this interface, which should then tbe posted to the Raven FHIR Server. If it provides a check as a response, everything is working.
+To test the components thus far and to load initial test data for the dashboard, navigate to the Raven Import and Submit URL above. In the ./raven-import-and-submit directory you will see a CSV that you may load using this interface, which should then tbe posted to the Raven FHIR Server. If it provides a check mark as a response, everything is working. If you receive an error of any sort, including the submission summary table showing an X mark, the configuration is not working properly.
 
 ### Raven Dashboard
 In the /raven-platform/raven-dashboard directory, execute:
