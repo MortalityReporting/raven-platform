@@ -45,7 +45,7 @@ sudo docker run -d --restart unless-stopped --publish 8080:8080 --name raven-fhi
 ```
 Available at: [http://localhost:8080/raven-fhir-server](http://localhost:8080/raven-fhir-server)
 
-### Raven FHIR Mapper Export
+### Raven Import and Submission API
 In the /raven-platform/raven-mapper-api directory, execute:
 ```
 sudo docker build -f Dockerfile.local -t raven-mapper-export .
@@ -56,7 +56,7 @@ Available at: [http://localhost:8081/raven-mapper-api](http://localhost:8081/rav
 To test the components thus far and to load initial test data for the dashboard, navigate to the Raven Mapper Export URL above. In the ./raven-mapper-api directory you will see a csv that you may load using this interface, which should then tbe posted to the Raven FHIR Server. If it provides a check as a response, everything is working.
 
 ### Raven Dashboard
-In the /raven-platform/raven-mapper-api directory, execute:
+In the /raven-platform/raven-dashboard directory, execute:
 ```
 sudo docker build -f Dockerfile.local -t raven-dashboard . 
 sudo docker run -d -p 80:80 --network=raven-platform --name raven-dashboard --restart unless-stopped raven-dashboard:latest
